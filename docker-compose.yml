@@ -7,7 +7,7 @@ services:
     build: ./infra/docker/php
     volumes:
       - php-fpm-socket:/var/run/php-fpm
-      - ./src:/work
+      - ./src:/work/backend
 
   web:
     build: ./infra/docker/nginx
@@ -17,7 +17,7 @@ services:
       - app
     volumes:
       - php-fpm-socket:/var/run/php-fpm
-      - ./src:/work
+      - ./src:/work/backend
 
   db:
     build: ./infra/docker/mysql

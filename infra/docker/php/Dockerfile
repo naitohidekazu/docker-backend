@@ -31,4 +31,4 @@ RUN pecl install xdebug && docker-php-ext-enable xdebug
 COPY ./php-fpm.d/zzz-www.conf /usr/local/etc/php-fpm.d/zzz-www.conf
 COPY ./php.ini /usr/local/etc/php/php.ini
 
-WORKDIR /src
+WORKDIR /work/backend
